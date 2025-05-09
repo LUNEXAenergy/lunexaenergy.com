@@ -1,0 +1,402 @@
+/* ============================
+   RESET Y ESTILO GLOBAL
+============================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+ 
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fdfdfd;
+    color: #212121;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .main-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  
+  
+  /* ============================
+     HEADER ESTILO LUNEXA
+  ============================= */
+  .simulador-header {
+    height: 80px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+  
+.simulador-header .container {
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    width: 100%;
+}
+  .simulador-header .logo {
+    height: 110px;
+  }
+  
+  .contacto-header {
+    font-size: 20px;
+    color: #444;
+    text-align: right;
+    line-height: 1.4;
+  }
+  
+  .contacto-header span {
+    font-weight: 500;
+    margin-right: 6px;
+  }
+  
+  .contacto-header a {
+    text-decoration: none;
+    color: #e69500;
+    font-weight: 600;
+    transition: color 0.2s;
+  }
+  
+  .contacto-header a:hover {
+    color: #c77700;
+  }
+  
+  /* ============================
+     BARRA DE PROGRESO CON SOLES
+  ============================= */
+  .barra-progreso {
+    position: relative;
+    width: 800px;
+    margin: 40px auto 20px;
+    height: 60px;
+  }
+  
+  .linea-fondo {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: #ccc;
+    transform: translateY(-50%);
+    z-index: 0;
+    border-radius: 10px;
+  }
+  
+  .sol-paso {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    background-color: #fff;
+    border: 3px solid #ccc;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial;
+    transition: all 0.3s ease;
+    z-index: 1;
+  }
+  
+  .sol-paso[data-step="1"] { left: 0; }
+  .sol-paso[data-step="2"] { left: 50%; }
+  .sol-paso[data-step="3"] { right: 0; }
+  
+  .sol-paso.activo {
+    border-color: #FFC107;
+    background-color: #fffbea;
+    transform: translateY(-50%) scale(1.0);
+  }
+  
+  /* ============================
+     FORMULARIO SIMULADOR
+  ============================= */
+  .paso {
+    max-width: 480px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    position: relative;
+    margin-bottom: 100px;
+  }
+  
+  .paso h2 {
+    font-size: 22px;
+    margin-bottom: 16px;
+    color: #e69500;
+    text-align: center;
+  }
+  
+  .paso p {
+    margin-bottom: 24px;
+    color: #555;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  /* ============================
+     BOTONES
+  ============================= */
+  .botones {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .btn {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #212121;
+    background-color: #FFC107;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    min-width: 160px;
+    transition: 0.2s;
+  }
+  
+  .btn:hover {
+    background-color: #e6a806;
+  }
+  
+  /* ============================
+     MENSAJE FINAL
+  ============================= */
+  #mensajeFinal {
+    text-align: center;
+    margin-top: 60px;
+    padding: 20px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #mensajeFinal h3 {
+    font-size: 24px;
+    color: #28a745;
+    margin-bottom: 10px;
+  }
+  
+  #mensajeFinal p {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* ============================
+     FOOTER ESTILO LUNEXA
+  ============================= */
+  footer {
+    background-color: #fff;
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+    padding: 30px;
+    margin-top: 60px;
+    box-shadow: 0 -1px 5px rgba(0,0,0,0.05);
+  }
+  
+ 
+  
+  /* ============================
+     ESTILOS Choices.js LUNEXA
+  ============================= */
+  .choices__list--dropdown {
+    max-height: 400px !important;
+    overflow-y: auto;
+    background-color: #fff;
+    border: 2px solid #FFC107;
+    border-radius: 10px;
+  }
+  
+  .choices__item--selectable.is-highlighted {
+    background-color: #FFD700 !important; /* Amarillo corporativo */
+    color: #212121;
+  }
+  
+  .choices__inner {
+    border: 2px solid #FFC107;
+    border-radius: 1000px;
+    padding: 10px 12px;
+    text-align: center;
+    cursor: pointer;
+    
+  }
+  
+  .choices__placeholder {
+    color: #999;
+  }
+  
+  .choices__list--single {
+    text-align: center;
+  }
+  
+  #formAhorro .choices {
+    max-width: 300px;
+    margin: 0 auto;
+    margin-bottom: 24px;
+  }
+
+  /* Mostrar solo en desktop */
+.desktop-only {
+    display: block;
+  }
+  
+  /* Mostrar solo en móvil */
+  .solo-movil {
+    display: none;
+  }
+
+  .simulador-header {
+    position: sticky; /* Para mantenerlo arriba */
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 999;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    
+  }
+  
+
+   /* ============================
+     RESPONSIVE
+  ============================= */
+  @media (max-width: 500px) {
+
+    body {
+        padding: 0;
+      }
+
+     /* Header fijo, ancho completo, logo centrado */
+    
+  .simulador-header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 999;
+    padding: 10px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+     left: 0;       /* Aseguramos alineación */
+     right: 0;
+     padding: 10px 0;
+  }
+
+  .simulador-header .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+    padding: 0 0;        /* Quitamos el padding lateral */
+    margin: 0 auto;
+    display: flex;
+  }
+
+  .simulador-header .logo {
+    max-width: 200px;
+    height: auto;
+  }
+
+  /* Ocultar el "¡Llámanos!" del header en móvil */
+  .desktop-only {
+    display: none;
+  }
+
+  /* Mostrar bloque de teléfono móvil */
+  .solo-movil {
+    display: block;
+  }
+
+  .telefono-movil {
+    margin: 24px auto;
+    text-align: center;
+    font-size: 40px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Formulario adaptado */
+  .paso {
+    padding: 24px 16px;
+    margin: 24px auto 80px;
+  }
+
+  /* Botones uno debajo del otro */
+  .botones {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Barra de progreso responsiva */
+  .barra-progreso {
+    width: 100%;
+    max-width: 320px;
+    margin: 32px auto 16px;
+  }
+
+  .sol-paso[data-step="1"] {
+    left: 0%;
+    transform: translateY(-50%) translateX(-50%);
+  }
+
+  .sol-paso[data-step="2"] {
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+  }
+
+  .sol-paso[data-step="3"] {
+    left: 100%;
+    transform: translateY(-50%) translateX(-50%);
+  }
+
+  /* Choices.js centrado y ajustado */
+  #formAhorro .choices {
+    max-width: 280px;
+    margin: 0 auto 24px;
+  }
+
+  /* Ajuste del footer */
+  footer {
+    padding: 24px 12px;
+    font-size: 13px;
+  }
+  }

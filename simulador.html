@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simulador de Ahorro | Lunexa</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="simulador.css" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init('IsZob2GWypDxYHiUk'); // Public key de EmailJS
+    })();
+  </script>
+</head>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+	  document.body.classList.add("fade-in");
+	});
+  </script>
+  
+<body>
+  <div class="main-container">
+    <header class="simulador-header">
+      <div class="container">
+        <a href="index.html">
+          <img src="logo.png" alt="Lunexa Energy" class="logo" />
+        </a>
+        <nav class="nav-principal">
+          <ul>
+            
+            <li class="dropdown">
+              <a href="index.html#servicios" class="dropdown-toggle">Autoconsumo</a>
+              <ul class="submenu">
+                <li><a href="empresa.html">Empresa</a></li>
+                <li><a href="hogares.html">Hogares</a></li>
+              </ul>
+            </li>
+            <li><a href="luz.html">Luz</a></li>
+            <li><a href="independencia.html">Independencia Energética</a></li>
+            <li><a href="conocenos.html">Conócenos</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+        <div class="contacto-header desktop-only">
+          <span>¡Llámanos!</span>
+          <a href="tel:+34900123456">📞 <strong>638 154 406</strong></a>
+        </div>
+      </div>
+    </header>
+    
+
+    <div class="barra-progreso">
+      <div class="linea-fondo"></div>
+      <div class="sol-paso activo" data-step="1">☀️</div>
+      <div class="sol-paso" data-step="2">☀️</div>
+      <div class="sol-paso" data-step="3">☀️</div>
+    </div>
+
+    <form id="formAhorro">
+      <div class="paso paso-1">
+        <h2>Hola, soy Lunexa ☀️</h2>
+        <p>¿Cuánto pagas al mes en tu factura de la luz?</p>
+        <select required id="gasto">
+          <option value="">Selecciona una opción</option>
+          
+			<!-- De 50 a 1000 en saltos de 50 -->
+			<option value="50">50€/mes</option>
+			<option value="100">100€/mes</option>
+			<option value="150">150€/mes</option>
+			<option value="200">200€/mes</option>
+			<option value="250">250€/mes</option>
+			<option value="300">300€/mes</option>
+			<option value="350">350€/mes</option>
+			<option value="400">400€/mes</option>
+			<option value="450">450€/mes</option>
+			<option value="500">500€/mes</option>
+			<option value="550">550€/mes</option>
+			<option value="600">600€/mes</option>
+			<option value="650">650€/mes</option>
+			<option value="700">700€/mes</option>
+			<option value="750">750€/mes</option>
+			<option value="800">800€/mes</option>
+			<option value="850">850€/mes</option>
+			<option value="900">900€/mes</option>
+			<option value="950">950€/mes</option>
+			<option value="1000">1000€/mes</option>
+		  
+			<!-- De 1250 a 2500 en saltos de 250 -->
+			<option value="1250">1250€/mes</option>
+			<option value="1500">1500€/mes</option>
+			<option value="1750">1750€/mes</option>
+			<option value="2000">2000€/mes</option>
+			<option value="2250">2250€/mes</option>
+			<option value="2500">2500€/mes</option>
+		  
+			<!-- De 3000 a 5000 en saltos de 500 -->
+			<option value="3000">3000€/mes</option>
+			<option value="3500">3500€/mes</option>
+			<option value="4000">4000€/mes</option>
+			<option value="4500">4500€/mes</option>
+			<option value="5000">5000€/mes</option>
+        </select>
+        <div class="botones">
+          <button type="button" class="btn siguiente">Continuar</button>
+        </div>
+      </div>
+
+      <div class="paso paso-2" style="display:none">
+        <h2>¡Perfecto!</h2>
+        <p>¿En qué provincia quieres hacer tu instalación?</p>
+        <select required id="provincia">
+          <option value="">Selecciona una provincia</option>
+		  <option>Álava</option>
+		  <option>Albacete</option>
+		  <option>Alicante</option>
+		  <option>Almería</option>
+		  <option>Asturias</option>
+		  <option>Ávila</option>
+		  <option>Badajoz</option>
+		  <option>Barcelona</option>
+		  <option>Burgos</option>
+		  <option>Cáceres</option>
+		  <option>Cádiz</option>
+		  <option>Castellón</option>
+		  <option>Ceuta</option>
+		  <option>Ciudad Real</option>
+		  <option>Córdoba</option>
+		  <option>Cuenca</option>
+		  <option>Gerona</option>
+		  <option>Granada</option>
+		  <option>Guadalajara</option>
+		  <option>Guipúzcoa</option>
+		  <option>Huelva</option>
+		  <option>Huesca</option>
+		  <option>Islas Baleares</option>
+		  <option>Jaén</option>
+		  <option>La Coruña</option>
+		  <option>La Rioja</option>
+		  <option>Las Palmas</option>
+		  <option>León</option>
+		  <option>Lérida</option>
+		  <option>Lugo</option>
+		  <option>Madrid</option>
+		  <option>Málaga</option>
+		  <option>Melilla</option>
+		  <option>Murcia</option>
+		  <option>Navarra</option>
+		  <option>Orense</option>
+		  <option>Palencia</option>
+		  <option>Pontevedra</option>
+		  <option>Salamanca</option>
+		  <option>Santa Cruz de Tenerife</option>
+		  <option>Segovia</option>
+		  <option>Sevilla</option>
+		  <option>Soria</option>
+		  <option>Tarragona</option>
+		  <option>Teruel</option>
+		  <option>Toledo</option>
+		  <option>Valencia</option>
+		  <option>Valladolid</option>
+		  <option>Vizcaya</option>
+		  <option>Zamora</option>
+		  <option>Zaragoza</option>
+        </select>
+        <div class="botones">
+          <button type="button" class="btn volver">Volver</button>
+          <button type="button" class="btn siguiente">Continuar</button>
+        </div>
+      </div>
+
+      <div class="paso paso-3" style="display:none">
+        <h2>¡Ya casi lo tenemos!</h2>
+        <p>Déjanos tus datos para enviarte tu oferta personalizada:</p>
+        <input type="text" placeholder="Nombre" required name="nombre" />
+        <input type="text" placeholder="Apellidos" name="apellidos" />
+        <input type="tel" placeholder="Teléfono" required name="telefono" />
+        <input type="email" placeholder="Correo electrónico" required name="email" />
+        <input type="hidden" name="precio" />
+        <input type="hidden" name="provincia" />
+        <div class="botones">
+          <button type="button" class="btn volver">Volver</button>
+          <button type="submit" class="btn">Enviar</button>
+        </div>
+      </div>
+    </form>
+
+    <div class="telefono-movil solo-movil">
+      <p style="margin: 0; font-size: 30px;">¡Llámanos!</p>
+      <a href="tel:+34900123456" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: #e69500; margin-top: 16px; font-weight: bold; font-size: 35px;">
+        📞 <span>638 154 406</span>
+      </a>
+    </div>
+
+    <div id="mensajeFinal" style="display:none">
+      <h3>✅ ¡Gracias por tu interés!</h3>
+      <p>Un agente de Lunexa se pondrá en contacto contigo en las próximas 24 horas con tu oferta de ahorro solar personalizada.</p>
+    </div>
+  </div>
+
+  <footer class="simulador-footer">
+    <div class="footer-container">
+      <p>© 2025 <strong>LUNEXA</strong> · Energía Solar Inteligente</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+  <script>
+    const selects = document.querySelectorAll('select');
+    selects.forEach(sel => new Choices(sel, {
+      searchEnabled: false,
+      itemSelectText: '',
+      shouldSort: false
+    }));
+
+    const pasos = document.querySelectorAll('.paso');
+    const soles = document.querySelectorAll('.sol-paso');
+    let pasoActual = 0;
+
+    function mostrarPaso(index) {
+      pasos.forEach((paso, i) => paso.style.display = i === index ? 'block' : 'none');
+      soles.forEach((sol, i) => sol.classList.toggle('activo', i === index));
+    }
+
+    document.querySelectorAll('.siguiente').forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (pasoActual === 0 && !document.getElementById('gasto').value) {
+          alert('Por favor, selecciona cuánto pagas al mes.');
+          return;
+        }
+        if (pasoActual === 1 && !document.getElementById('provincia').value) {
+          alert('Por favor, selecciona una provincia.');
+          return;
+        }
+        if (pasoActual < pasos.length - 1) {
+          pasoActual++;
+          mostrarPaso(pasoActual);
+        }
+      });
+    });
+
+    document.querySelectorAll('.volver').forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (pasoActual > 0) {
+          pasoActual--;
+          mostrarPaso(pasoActual);
+        }
+      });
+    });
+
+    document.getElementById('formAhorro').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const precio = document.getElementById('gasto').value;
+      const provincia = document.getElementById('provincia').value;
+      const nombre = this.querySelector('input[name="nombre"]').value;
+      const apellidos = this.querySelector('input[name="apellidos"]').value;
+      const telefono = this.querySelector('input[name="telefono"]').value;
+      const email = this.querySelector('input[name="email"]').value;
+
+      if (!precio || !provincia || !nombre || !telefono || !email) {
+        alert('Por favor, rellena todos los campos obligatorios antes de enviar.');
+        return;
+      }
+
+      this.querySelector('input[name="precio"]').value = precio;
+      this.querySelector('input[name="provincia"]').value = provincia;
+
+      emailjs.sendForm('service_qkckeya', 'template_ai8l4ar', this, 'IsZob2GWypDxYHiUk')
+        .then(() => {
+          this.style.display = 'none';
+          document.getElementById('mensajeFinal').style.display = 'block';
+        }, (error) => {
+          alert('Error al enviar el formulario. Intenta de nuevo.');
+          console.error('EmailJS error:', error);
+        });
+    });
+  </script>
+</body>
+</html>
