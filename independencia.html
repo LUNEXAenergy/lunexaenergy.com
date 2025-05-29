@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Independencia Energética | LUNEXA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="fade-in independencia-page no-index">
+
+  <header>
+  <div class="logo">
+  <a href="index.html">
+    <img src="logo.png" alt="Logo de LUNEXA" class="logo-png">
+  </a>
+</div>
+  <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+  <nav class="nav-principal">
+    <ul>
+      <li class="dropdown">
+        <a href="index.html#servicios" class="dropdown-toggle">Autoconsumo</a>
+        <ul class="submenu">
+          <li><a href="empresa.html">Empresa</a></li>
+          <li><a href="hogares.html">Hogares</a></li>
+        </ul>
+      </li>
+      <li><a href="luz.html">Luz</a></li>
+      <li><a href="independencia.html">Independencia Energética</a></li>
+      <li><a href="conocenos.html">Conócenos</a></li>
+      <li><a href="index.html#contacto">Contacto</a></li>
+    </ul>
+    <div class="cta-container">
+    <a href="simulador.html" class="cta-ahorro">Calcula tu Ahorro</a>
+  </div>
+  </nav>
+</header>
+
+
+  <main class="section">
+    <h2 style="text-align:center;">Independencia Energética</h2>
+    <p style="max-width:700px; margin:20px auto; text-align:center;">
+      En LUNEXA apostamos por la autosuficiencia energética. Descubre cómo nuestros sistemas solares y soluciones innovadoras te permiten reducir la dependencia de la red eléctrica, optimizar tu consumo y aumentar tu ahorro a largo plazo.
+    </p>
+    <div class="content-container">
+      <img src="independencia.jpg" alt="Independencia energética" style="width:100%; max-width:600px; display:block; margin:20px auto;">
+      <p style="text-align:center;">
+        Contacta con nosotros para conocer las opciones más avanzadas en independencia energética para tu hogar o empresa.
+      </p>
+    </div>
+  </main>
+
+   <footer>
+    <p>© 2025 <strong>LUNEXA</strong> · Energía Solar Inteligente</p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-principal ul');
+
+    toggleBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+
+    const navLinks = document.querySelectorAll('.nav-principal a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          navMenu.classList.remove('show');
+        }
+      });
+    });
+  </script>
+</body>
+<!-- MODO HAMBURGUESA -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const navList = document.querySelector('nav ul');
+    const nav = document.querySelector('nav'); 
+    const navLinks = document.querySelectorAll('nav ul li a');
+    const submenu = document.querySelector('.submenu');
+
+    navList.classList.remove('show');
+
+    // Abrir/cerrar menú al hacer clic en el botón hamburguesa
+    toggleBtn.addEventListener('click', function (e) {
+        e.stopPropagation();  // Evita que se dispare el evento global al abrir
+        navList.classList.toggle('show');
+        nav.classList.toggle('active');
+
+        if (!navList.classList.contains('show')) {
+            submenu.classList.remove('show-submenu');
+        }
+
+        if (navList.classList.contains('show')) {
+            document.body.classList.add('menu-abierto');
+        } else {
+            document.body.classList.remove('menu-abierto');
+        }
+    });
+
+    // Gestionar clic en los enlaces del menú
+    navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            if (link.classList.contains('dropdown-toggle')) {
+                // Click en "Autoconsumo" → abre/cierra el submenu
+                e.preventDefault();
+                e.stopPropagation();
+
+                const parentDropdown = link.closest('.dropdown');
+                const submenu = parentDropdown.querySelector('.submenu');
+
+                submenu.classList.toggle('show-submenu');
+            } else if (link.closest('.submenu')) {
+                // Click en Empresa o Hogares: no hacemos nada especial (deja navegar)
+            } else {
+                // Click en otros enlaces: cierra todo
+                navList.classList.remove('show');
+                nav.classList.remove('active');
+
+                document.querySelectorAll('.submenu').forEach(sub => {
+                    sub.classList.remove('show-submenu');
+                });
+                document.body.classList.remove('menu-abierto');
+            }
+        });
+    });
+
+    // 💥 Cerrar el menú si haces clic fuera de él
+    document.addEventListener('click', function(event) {
+        const isClickInsideMenu = nav.contains(event.target);
+        const isClickOnToggle = toggleBtn.contains(event.target);
+
+        if (!isClickInsideMenu && !isClickOnToggle) {
+            if (nav.classList.contains('active')) {
+                navList.classList.remove('show');
+                nav.classList.remove('active');
+                submenu.classList.remove('show-submenu');
+                document.body.classList.remove('menu-abierto');
+            }
+        }
+    });
+
+    // 💥 Cerrar el menú si haces scroll
+    window.addEventListener('scroll', function() {
+        if (nav.classList.contains('active')) {
+            navList.classList.remove('show');
+            nav.classList.remove('active');
+            submenu.classList.remove('show-submenu');
+            document.body.classList.remove('menu-abierto');
+        }
+    });
+  });
+</script>
+
+</html>
