@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empresa | LUNEXA</title>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<script>
+  // Selecciona todos los enlaces internos
+  const links = document.querySelectorAll('a[href]');
+  links.forEach(link => {
+    link.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+
+      // Solo aplica si el enlace va a otra página del mismo sitio (no _blank, ni tel/mailto)
+      if (!href.startsWith('http') && !href.startsWith('#') && !href.startsWith('mailto') && !href.startsWith('tel')) {
+        e.preventDefault(); // Evita navegación inmediata
+
+        // Agrega la clase fade-out al <body>
+        document.body.classList.add('fade-out');
+
+        // Espera a que termine la animación y luego navega
+        setTimeout(() => {
+          window.location.href = href;
+        }, 400); // mismo tiempo que en el CSS fadeOut
+      }
+    });
+  });
+</script>
+
+<body class="fade-in empresa-page no-index">
+  
+  <!-- Header con menú y hamburguesa -->
+ <header>
+  <div class="logo">
+  <a href="index.html">
+    <img src="logo.png" alt="Logo de LUNEXA" class="logo-png">
+  </a>
+</div>
+  <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+  <nav class="nav-principal">
+    <ul>
+      <li class="dropdown">
+        <a href="index.html#servicios" class="dropdown-toggle">Autoconsumo</a>
+        <ul class="submenu">
+          <li><a href="empresa.html">Empresa</a></li>
+          <li><a href="hogares.html">Hogares</a></li>
+        </ul>
+      </li>
+     <!--<li><a href="luz.html">Luz</a></li>
+        <li><a href="independencia.html">Independencia Energética</a></li>-->
+         <li><a href="independencia.html">Independencia Energética</a></li>
+      <li><a href="conocenos.html">Conócenos</a></li>
+      <li><a href="index.html#contacto">Contacto</a></li>
+    </ul>
+    <div class="cta-container">
+    <a href="simulador.html" class="cta-ahorro">Calcula tu Ahorro</a>
+  </div>
+  </nav>
+</header>
+
+  <!-- Contenido específico de la página Empresa -->
+ <main class="empresa-hero">
+  <section class="empresa-intro">
+    <div class="texto">
+      <p class="categoria">AUTOSUFIENCIA ENERGÉTICA</p>
+      <h1><span class="negrita-sola">100% AUTOSUFIENCIA ENERGETICA.</span>  NO MÁS DEPENDENCIA DE LA RED</h1>
+      <p class="ahorro"><strong>Ahorra
+        
+      </strong>  en tu factura de la luz sin necesidad inversión inicial.</p>
+      <a href="simulador.html" class="btn btn-empresa">SOLICITAR PRESUPUESTO</a>
+    </div>
+    <div class="imagen">
+      <img src="empresa.jpg" alt="Instalación solar empresarial">
+    </div>
+  </section>
+
+  <section class="empresa-beneficios">
+    <h2><span class="resaltado">¿CÓMO FUNCIONA EL AUTOCONSUMO DE LUNEXA SIN INVERSIÓN INICIAL Y QUÉ VENTAJAS TIENE?</span></h2>
+    <div class="beneficios-grid">
+      <div>
+        <h3>AUTOCONSUMO Y ENERGÍA DE LA RED</h3>
+        <p>En LUNEXA unimos autoconsumo y energía de la red para asegurar tu competitividad siempre y a largo plazo.</p>
+      </div>
+      <div>
+        <h3>FORMATO PERSONALIZADO</h3>
+        <p>Creamos instalaciones 100% personalizadas para tu empresa.</p>
+      </div>
+      <div>
+        <h3>SIN PREOCUPACIONES</h3>
+        <p>Paga solo por lo que consumes. Nosotros nos encargamos de todo: mantenimiento, suministro, seguimiento...</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<section class="empresa-pasos">
+  <h2>¿CÓMO</span> AHORRAR EN ENERGÍA DESDE EL MINUTO 1?</span></h2>
+
+  <div class="pasos-con-linea">
+    <div class="linea-horiz"></div>
+
+    <div class="pasos-grid">
+      <div class="paso-box">
+        <div class="circulo"><span>1</span></div>
+        <h3>Hoy</h3>
+        <p><strong>Pídenos un presupuesto gratuito</strong><br>Estudiamos lo que tu tejado puede producir por ti, los ahorros que conseguirás y el precio de hacerlo realidad.</p>
+      </div>
+      <div class="paso-box">
+        <div class="circulo"><span>2</span></div>
+        <h3>En 72 horas</h3>
+        <p><strong>Recibes una propuesta personalizada</strong><br>Te presentamos un estudio de viabilidad con la implantación de los paneles solares en tu empresa, resolviendo todas tus dudas sobre trámites y subvenciones.</p>
+      </div>
+      <div class="paso-box">
+        <div class="circulo"><span>3</span></div>
+        <h3>En 1 semana</h3>
+        <p><strong>Visitamos tu empresa</strong><br>Un técnico verificará in situ el estudio de viabilidad y resolverá cualquier duda que tengas.</p>
+      </div>
+      <div class="paso-box">
+        <div class="circulo"><span>4</span></div>
+        <h3>En 3-4 semanas</h3>
+        <p><strong>Instalamos y empiezas a ahorrar</strong><br>Empieza a producir energía limpia y barata desde el minuto cero sin preocuparte de nada.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="comparativa-lunexa section">
+  <div class="contenedor-comparativa">
+    <!-- COLUMNA IZQUIERDA -->
+    <div class="columna-izquierda">
+   <h2 class="empresa-pasos-titulo">MÉTODO LUNEXA</h2>
+      <ul class="lista-comparativa">
+        <li><span>Desembolso inicial</span> <span class="no">No</span></li>
+        <li><span>Computa como deuda</span> <span class="no">No</span></li>
+        <li><span>Pago en función del consumo</span> <span class="si">Sí</span></li>
+        <li><span>Eres propietario de la instalación</span> <span class="si">Sí</span></li>
+        <li><span>Posibilidad de adquisición acelerada</span> <span class="si separado">Sí</span></li>
+        <li><span>Gestión y venta de excedentes</span> <span class="si">Sí</span></li>
+        <li><span>Mantenimiento incluido</span> <span class="si">Sí</span></li>
+      </ul>
+    </div>
+
+    <!-- COLUMNA DERECHA -->
+    <div class="columna-derecha">
+      <h2 class="empresa-pasos-titulo">¿POR QUÉ INSTALAR PLACAS SOLARES?</h2>
+      <div class="beneficio-item">
+        <img src="icono1.png" alt="Ahorro luz">
+        <p>Reduce tu factura de la luz al mínimo</p>
+      </div>
+      <div class="beneficio-item">
+        <img src="icono2.png" alt="Valor propiedad">
+        <p>Aumenta el valor de tu propiedad</p>
+      </div>
+      <div class="beneficio-item">
+        <img src="icono3.png" alt="Planeta sostenible">
+        <p>Cuida el único planeta que tenemos desde tu tejado</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="empresa-funcionamiento">
+  <div class="funcionamiento-contenido">
+
+   <div class="funcionamiento-texto">
+  <h2><strong>¿CÓMO FUNCIONAN</strong><span class="texto-fino"> LOS PANELES SOLARES EN TU EMPRESA?</span></h2>
+  <p>
+    En primer lugar, los paneles solares captan la energía del sol y la convierten en electricidad. A continuación, los inversores la transforman en electricidad apta para ser utilizada de forma segura y eficiente en tu empresa.
+  </p>
+  <p>
+    Esta energía se utiliza en tiempo real, cubriendo directamente tu demanda energética. Si instalas baterías, podrás almacenar el excedente y utilizarlo cuando lo necesites. También puedes verter la energía sobrante a la red, recibiendo una compensación económica. Otra opción es almacenarla en un monedero o batería virtual, donde podrás compensar consumos futuros sin límite de tiempo.
+  </p>
+</div>
+    
+    <div class="funcionamiento-imagen">
+      <img src="empresa1.png" alt="Funcionamiento de los paneles solares en la empresa">
+    </div>
+  </div>
+</section>
+
+
+  <!-- LUZ -->
+  <section id="luz" class="section">
+    <h2>¿QUIERES AHORRAR EN TU FACTURA DE LA LUZ?</h2>
+    <p class="subtexto-luz">Ahorra hasta un <strong class="negrita-negra">70%</strong></p>
+    <div class="contenedor-luz-horizontal">
+      <img src="factura-icono.png" alt="Factura solar" class="imagen-luz-lateral">
+      <div class="card-luz-texto">
+        <a href="simulador.html" class="btn-icon-luz">CALCULA TU AHORRO</a>
+        <div style="height: 16px;"></div>
+        <p class="info-line"> Recibirás una respuesta en un plazo aproximado de 24 horas.</p>
+      </div>
+    </div>
+  </section>
+
+
+<!-- PREGUNTAS FREQUENTES -->
+<section id="descubre-mas" class="section">
+  <h2>DESCUBRE MÁS</h2>
+  <div id="bloquePreguntas" class="preguntas-grid">
+    <div class="pregunta-card">
+      <h4 class="pregunta-titulo">&#191;Cómo funciona el modelo sin inversión inicial?</h4>
+      <div class="respuesta">
+        <p>En Lunexa aplicamos un modelo PPA que te permite acceder a energía solar <strong>sin necesidad de realizar una inversión inicial</strong>. Nosotros nos encargamos de todo, diseñamos la instalación a medida, asumimos el coste y realizamos la instalación y gestionamos el mantenimiento y seguimiento continuo. 
+<br><br>Tú sólo pagas una <strong>cuota mensual acordada o en función del ahorro generado</strong> en tu factura eléctrica. De esta forma, <strong>empiezas a ahorrar desde el primer día</strong> y además, te beneficias de energía limpia, estable y más económica, mientras Lunexa asume toda la inversión y responsabilidad técnica.</p>
+      </div>
+    </div>
+
+    <div class="pregunta-card">
+      <h4 class="pregunta-titulo">&#191;Qué diferencia a Lunexa de otras empresas solares?</h4>
+      <div class="respuesta">
+        <p>En Lunexa, hacer el cambio a energía solar es totalmente gratis desde el primer día. No pedimos inversión inicial ni anticipos. Nos encargamos de todo: diseño, instalación, mantenimiento y monitoreo del sistema, sin que tengas que pagar nada por adelantado.
+<br><br>
+A diferencia de otras empresas, no te vendemos solo paneles: te damos una solución completa, sin riesgos, sin complicaciones y con ahorro garantizado desde el primer mes. Tú ahorras, nosotros nos encargamos del resto.
+</p>
+      </div>
+    </div>
+
+    <div class="pregunta-card">
+      <h4 class="pregunta-titulo">&#191;Cómo garantizáis la calidad y durabilidad de las instalaciones?
+      </h4>
+      <div class="respuesta">
+        <p>En Lunexa trabajamos solo con equipos de alta gama y tecnología certificada a nivel internacional. Nuestros paneles solares y componentes tienen garantías de hasta 25 años, y son instalados por profesionales certificados que siguen los más altos estándares de calidad.    
+<br><br>
+Además, monitoreamos el sistema en tiempo real para asegurar su óptimo rendimiento y ofrecemos mantenimiento incluido, para que tú no tengas que preocuparte por nada. Así garantizamos una instalación duradera, eficiente y sin sorpresas.
+</p>
+      </div>
+    </div>
+
+    <div class="pregunta-card">
+      <h4 class="pregunta-titulo">&#191;Cómo ahorrar en tu factura de la luz?</h4>
+      <div class="respuesta">
+        <p>En Lunexa no solo instalamos paneles solares: también somos comercializadora eléctrica. Esto nos permite ofrecerte una tarifa de luz personalizada, adaptada a tu consumo real y con precios más competitivos que las grandes eléctricas.
+<br><br>Al contratar la luz con Lunexa, te garantizamos: <strong>Ahorro directo</strong> en tu factura mensual,  <strong>transparencia total</strong>, sin costes ocultos ni letra pequeña y <strong>atención personalizada</strong>, sin intermediarios ni centralitas impersonales
+<br><br>Tengas o no una instalación solar, con Lunexa puedes empezar a ahorrar desde el primer mes simplemente cambiando tu suministro con nosotros. Ahorra, simplifica y apóyate en una empresa que sí se preocupa por ti.
+</p>
+      </div>
+    </div>
+
+    <div class="pregunta-card">
+      <h4 class="pregunta-titulo">&#191;Cuál es el impacto ambiental de elegir Lunexa?</h4>
+      <div class="respuesta">
+        <p>Elegir Lunexa significa reducir tu huella de carbono desde el primer día. Al generar energía solar en tu propia instalación, evitas emisiones de CO₂ y disminuyes el uso de fuentes contaminantes.Además, al consumir energía limpia y local, haces tu operación más eficiente y sostenible,<strong> sin coste inicial y sin riesgos.</strong> 
+<br><br><strong>Con Lunexa, ahorras mientras proteges el planeta</strong>.
+</p>
+      </div>
+    </div>
+
+    <div class="pregunta-card">
+      <h4 class="pregunta-titulo">&#191;Qué pasa si ya tengo placas en casa?</h4>
+      <div class="respuesta">
+        <p>En Lunexa también ofrecemos soluciones si ya cuentas con una instalación solar. <strong>Te compramos tus placas existentes</strong>, lo que te permite <strong>recuperar tu inversión y obtener liquidez inmediata</strong> sin renunciar a los beneficios de la energía solar. Nosotros nos encargamos del mantenimiento, la optimización y la gestión de la instalación. Tú solo pagas por la energía que consumes, con total tranquilidad.
+<br><br><strong>Convierte tus paneles en capital inmediato, y deja el resto en manos de Lunexa.</strong>
+</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+ 
+  <!-- CONTACTO -->
+  <section id="contacto" class="section">
+    <h2>CONTACTO</h2>
+    <p>¿Tienes dudas o te gustaría saber cómo podemos ayudarte a ahorrar con energía solar?</p>
+    <div class="contacto-wrapper">
+      <div class="mini-contacto">
+        <p><strong>📧</strong> dbermello@lunexaenergy.com</p>
+        <p><strong>📞</strong> 638 154 406</p>
+      </div>
+      <form id="contact-form" class="contact-form">
+        <input type="text" name="user_name" placeholder="Nombre" required>
+        <input type="text" name="user_lastname" placeholder="Apellidos" required>
+        <input type="email" name="user_email" placeholder="Email" required>
+        <input type="tel" name="user_phone" placeholder="Teléfono" required>
+        <textarea name="message" rows="4" placeholder="Tu mensaje" required></textarea>
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 LUNEXA · Energía Solar Inteligente</p>
+  </footer>
+
+  <!-- Script para menú hamburguesa y submenu móvil -->
+  <script>
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-principal ul');
+    const dropdown = document.querySelector('.dropdown');
+    const toggle = dropdown.querySelector('.dropdown-toggle');
+    const submenu = dropdown.querySelector('.submenu');
+
+    toggleBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+
+    // Mostrar submenú y permitir redirección
+    toggle.addEventListener('click', (e) => {
+      submenu.classList.toggle('show-submenu');
+      // No evitamos el href → te redirige a index.html#servicios
+    });
+
+    // Cerrar menú al hacer clic en cualquier enlace
+    const navLinks = document.querySelectorAll('.nav-principal a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          navMenu.classList.remove('show');
+          document.querySelectorAll('.submenu').forEach(menu => {
+            menu.classList.remove('show-submenu');
+          });
+        }
+      });
+    });
+  </script>
+
+</body>
+<!-- MODO HAMBURGUESA -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const navList = document.querySelector('nav ul');
+    const nav = document.querySelector('nav'); 
+    const navLinks = document.querySelectorAll('nav ul li a');
+    const submenu = document.querySelector('.submenu');
+
+    navList.classList.remove('show');
+
+    // Abrir/cerrar menú al hacer clic en el botón hamburguesa
+    toggleBtn.addEventListener('click', function (e) {
+        e.stopPropagation();  // Evita que se dispare el evento global al abrir
+        navList.classList.toggle('show');
+        nav.classList.toggle('active');
+
+        if (!navList.classList.contains('show')) {
+            submenu.classList.remove('show-submenu');
+        }
+
+        if (navList.classList.contains('show')) {
+            document.body.classList.add('menu-abierto');
+        } else {
+            document.body.classList.remove('menu-abierto');
+        }
+    });
+
+    // Gestionar clic en los enlaces del menú
+    navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            if (link.classList.contains('dropdown-toggle')) {
+                // Click en "Autoconsumo" → abre/cierra el submenu
+                e.preventDefault();
+                e.stopPropagation();
+
+                const parentDropdown = link.closest('.dropdown');
+                const submenu = parentDropdown.querySelector('.submenu');
+
+                submenu.classList.toggle('show-submenu');
+            } else if (link.closest('.submenu')) {
+                // Click en Empresa o Hogares: no hacemos nada especial (deja navegar)
+            } else {
+                // Click en otros enlaces: cierra todo
+                navList.classList.remove('show');
+                nav.classList.remove('active');
+
+                document.querySelectorAll('.submenu').forEach(sub => {
+                    sub.classList.remove('show-submenu');
+                });
+                document.body.classList.remove('menu-abierto');
+            }
+        });
+    });
+
+    // 💥 Cerrar el menú si haces clic fuera de él
+    document.addEventListener('click', function(event) {
+        const isClickInsideMenu = nav.contains(event.target);
+        const isClickOnToggle = toggleBtn.contains(event.target);
+
+        if (!isClickInsideMenu && !isClickOnToggle) {
+            if (nav.classList.contains('active')) {
+                navList.classList.remove('show');
+                nav.classList.remove('active');
+                submenu.classList.remove('show-submenu');
+                document.body.classList.remove('menu-abierto');
+            }
+        }
+    });
+
+    // 💥 Cerrar el menú si haces scroll
+    window.addEventListener('scroll', function() {
+        if (nav.classList.contains('active')) {
+            navList.classList.remove('show');
+            nav.classList.remove('active');
+            submenu.classList.remove('show-submenu');
+            document.body.classList.remove('menu-abierto');
+        }
+    });
+  });
+</script>
+
+
+<!-- DESCUBRE MÁS -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleBtn = document.getElementById("togglePreguntas");
+    const bloque = document.getElementById("bloquePreguntas");
+    const contenedor = document.getElementById("faq-container");
+
+    // Scroll con compensación
+    function scrollToWithOffset(element, offset = 10) {
+      const top = element.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({
+        top: top,
+        behavior: "smooth"
+      });
+    }
+
+    toggleBtn.addEventListener("click", () => {
+      const visible = !bloque.classList.contains("oculto");
+
+      if (visible) {
+        bloque.classList.add("oculto");
+      } else {
+        bloque.classList.remove("oculto");
+        setTimeout(() => {
+          scrollToWithOffset(contenedor, 70); // Este scroll deja el botón arriba
+        }, 100);
+      }
+    });
+
+    document.querySelectorAll("header a").forEach(link => {
+      link.addEventListener("click", () => {
+        bloque.classList.add("oculto");
+      });
+    });
+  });
+</script>
+
+
+<!-- DESCUBRE MÁS, TARJETAS ABRIENDOSE -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const tarjetas = document.querySelectorAll(".pregunta-card");
+
+    tarjetas.forEach(card => {
+      card.addEventListener("click", () => {
+        card.classList.toggle("activa");
+      });
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const elementos = document.querySelectorAll('.fade-in-on-scroll');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // activa solo una vez
+        }
+      });
+    }, { threshold: 0.3 });
+
+    elementos.forEach(el => observer.observe(el));
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const bloques = document.querySelectorAll(".animado");
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.3
+    });
+
+    bloques.forEach(b => observer.observe(b));
+  });
+</script>
+
+<!-- EmailJS SDK + Script funcional -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    emailjs.init('IsZob2GWypDxYHiUk'); // Tu Public Key válida
+
+    const form = document.getElementById('contact-form');
+    const submitBtn = form.querySelector('button');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      console.log('📨 Enviando formulario...');
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Enviando...';
+
+     emailjs.sendForm('service_e329u0t', 'template_q9rbpvt', form)
+        .then((response) => {
+          console.log('✅ Formulario enviado con éxito:', response);
+          alert('✅ ¡Mensaje enviado con éxito!');
+          form.reset();
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Enviar';
+        })
+        .catch((error) => {
+          console.error('❌ Error al enviar:', error);
+          alert('❌ Error al enviar. Ver consola para más detalles.');
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Enviar';
+        });
+    });
+  });
+</script>
+
+
+</html>
