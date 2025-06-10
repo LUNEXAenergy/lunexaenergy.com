@@ -3,37 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Empresa | LUNEXA</title>
-   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <title>Conócenos - LUNEXA</title>
+  <meta name="description" content="Descubre quiénes somos en LUNEXA, nuestra misión, visión y valores para un futuro más sostenible.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<script>
-  // Selecciona todos los enlaces internos
-  const links = document.querySelectorAll('a[href]');
-  links.forEach(link => {
-    link.addEventListener('click', function (e) {
-      const href = this.getAttribute('href');
+<body class="fade-in conocenos-page no-index">
 
-      // Solo aplica si el enlace va a otra página del mismo sitio (no _blank, ni tel/mailto)
-      if (!href.startsWith('http') && !href.startsWith('#') && !href.startsWith('mailto') && !href.startsWith('tel')) {
-        e.preventDefault(); // Evita navegación inmediata
-
-        // Agrega la clase fade-out al <body>
-        document.body.classList.add('fade-out');
-
-        // Espera a que termine la animación y luego navega
-        setTimeout(() => {
-          window.location.href = href;
-        }, 400); // mismo tiempo que en el CSS fadeOut
-      }
-    });
-  });
-</script>
-
-<body class="fade-in empresa-page no-index">
-  
-  <!-- Header con menú y hamburguesa -->
- <header>
+  <!-- HEADER -->
+  <header>
   <div class="logo">
   <a href="index.html">
     <img src="logo.png" alt="Logo de LUNEXA" class="logo-png">
@@ -60,225 +38,52 @@
         <a href="simulador.html" class="cta-ahorro">Calcula tu Ahorro</a>
     </div>
     </nav>
+ 
 </header>
 
-  <!-- Contenido específico de la página Empresa -->
- <main class="empresa-hero">
-  <section class="empresa-intro">
-    <div class="texto">
-      <p class="categoria">PANELES PARA EMPRESAS</p>
-      <h1><span class="negrita-sola">MINIMIZA LA FACTURA</span>  DE LA LUZ EN TU EMPRESA</h1>
-      <p class="ahorro"><strong>Ahorra hasta un 70%</strong> en tu factura de la luz sin ninguna inversión inicial.</p>
-      <a href="simulador.html" class="btn btn-empresa">SOLICITAR PRESUPUESTO</a>
-    </div>
-    <div class="imagen">
-      <img src="empresa.jpg" alt="Instalación solar empresarial">
+
+  <!-- CONOCENOS -->
+  <section id="conocenos" class="section alt-bg">
+    <h2>CONÓCENOS</h2>
+    <p>
+      En LUNEXA trabajamos para que el acceso a la energía solar deje de ser una opción inaccesible y se convierta en una oportunidad para todos. A través de un modelo sin inversión inicial, acercamos soluciones fotovoltaicas a empresas y comunidades comprometidas con un futuro más sostenible.
+    </p>
+    <div class="conocenos-info">
+      <div class="valores-box">
+        <h3>Nuestra Misión</h3>
+        <p>Democratizar el acceso a la energía limpia, eliminando barreras económicas y técnicas, para que cualquiera pueda producir y consumir su propia energía solar de forma sencilla, rentable y sin riesgos.</p>
+      </div>
+      <div class="valores-box">
+        <h3>Nuestra Visión</h3>
+        <p>Impulsar un modelo energético descentralizado en el que cada tejado contribuya activamente a un sistema más limpio y eficiente. Nuestro objetivo es liderar la transición hacia una energía más accesible, participativa y respetuosa con el medio ambiente.</p>
+      </div>
+      <div class="valores-box">
+        <h3>Nuestros Valores</h3>
+        <ul class="lista-valores">
+          <li>Compromiso ambiental</li>
+          <li>Transparencia</li>
+          <li>Innovación</li>
+          <li>Accesibilidad</li>
+        </ul>
+      </div>        
     </div>
   </section>
-   
 
-
-<section class="pyme-problema">
-  <div class="contenedor-problema">
-    <div class="texto-izquierda">
+  <section class="instalacion-tejados">
+  <div class="instalacion-contenido">
+    <div class="instalacion-texto">
+      <p class="parrafo-destacado">
+        En cada instalación, tratamos tu tejado con el cuidado y respeto que merece, como si fuera nuestro propio hogar.
+      </p>
       <p>
-        Las <strong>PYMEs</strong> en España destinan <strong>más del 10% de sus ingresos anuales</strong> al pago de la factura eléctrica, pagando hasta un <strong>40% más</strong> de lo necesario
+        Cada tejado es único, y lo tratamos con la atención que se merece. Diseñamos soluciones a medida que se adaptan a tu cubierta sin dañarla ni comprometer su estética. Nos encargamos de cada detalle para que tú solo pienses en ahorrar.
       </p>
     </div>
-
-    <div class="iconos-derecha">
-      <div class="icono-box">
-        <img src="1.png" alt="icono coste electricidad">
-        <p>ALTO COSTE ELECTRICIDAD</p>
-      </div>
-      <div class="icono-box">
-        <img src="2.png" alt="icono fluctuación precio">
-        <p>FLUCTUACIÓN DEL PRECIO DE LA LUZ</p>
-      </div>
-      <div class="icono-box">
-        <img src="3.png" alt="icono sostenibilidad">
-        <p>INCUMPLIMIENTO DE SOSTENIBILIDAD</p>
-      </div>
+    <div class="instalacion-imagen">
+      <img src="conocenos.png" alt="Instaladores colocando paneles solares en un tejado">
     </div>
   </div>
-
-<div class="bloque-solucion">
-  <span class="solucion-badge">SOLUCIÓN</span>
-  <div class="solucion-texto">
-    <h2>INSTALACIÓN DE <strong>PANELES SOLARES</strong> A <strong>COSTE CERO</strong></h2>
-    <p>SOLUCIÓN <strong>LLAVE EN MANO</strong>, GESTIÓN COMPLETA DE PRINCIPIO A FIN</p>
-  </div>
-</div>
-
-<div class="beneficios-autoconsumo">
-  <div class="beneficio-box">
-    <h3><strong>AHORRO</strong> EN TU FACTURA<br>DESDE EL PRIMER DÍA</h3>
-    <p>
-      Empieza a reducir al máximo tus costes eléctricos de forma inmediata gracias al autoconsumo solar.
-    </p>
-  </div>
-  <div class="beneficio-box">
-    <h3><strong>POTENCIA</strong> LA IMAGEN DE TU EMPRESA</h3>
-    <p>
-      Asocia a tu empresa a la innovación, el progreso y el respeto por el medio ambiente, mejorando así la reputación de tu empresa.
-    </p>
-  </div>
-  <div class="beneficio-box">
-    <h3><strong>PROTEGE</strong> EL PLANETA CON ENERGÍA LIMPIA</h3>
-    <p>
-      Contribuye activamente a la transición energética usando energía renovable y apostando por un futuro más sostenible.
-    </p>
-  </div>
-</div>
-
-</section>
-
-
-  <section class="empresa-beneficios">
-    <h2><span class="resaltado">¿CÓMO FUNCIONA EL AUTOCONSUMO DE LUNEXA SIN INVERSIÓN INICIAL Y QUÉ VENTAJAS TIENE?</span></h2>
-    <div class="beneficios-grid">
-      <div>
-        <h3>AUTOCONSUMO Y ENERGÍA DE LA RED</h3>
-        <p>En LUNEXA unimos autoconsumo y energía de la red para asegurar tu competitividad siempre y a largo plazo.</p>
-      </div>
-      <div>
-        <h3>FORMATO PERSONALIZADO</h3>
-        <p>Creamos instalaciones 100% personalizadas para tu empresa.</p>
-      </div>
-      <div>
-        <h3>SIN PREOCUPACIONES</h3>
-        <p>Paga solo por lo que consumes. Nosotros nos encargamos de todo: mantenimiento, suministro, seguimiento...</p>
-      </div>
-    </div>
-  </section>
-</main>
-
-
-<section class="beneficios-lunexa">
-  <h2 class="titulo-beneficios">TODOS LOS <span class="destacado">BENEFICIOS</span> DE LUNEXA...</h2>
-  <div class="contenedor-beneficios">
-    <div class="caja-beneficio">
-      <h3> ENERGÍA SOLAR DE AUTOCONSUMO</h3>
-     <ul class="lista-beneficios">
-        <li>Accede a autoconsumo sin inversión</li>
-        <li><strong>Ahorrará hasta un 70%</strong>, según tu tipología de consumo.</li>
-        <li>Monitorizamos la <strong>eficiencia de tu instalación</strong> a diario.</li>
-        <li><strong>Nos encargamos de todo.</strong> Sin papeleos ni preocupaciones.</li>
-        <li><strong>Invertimos en tu planta solar</strong>;tú decides la duración del contrato y al finalizar el contrato, pasará a ser tuya sin coste.</li>
-      </ul>
-    </div>
-
-    <div class="simbolo-central"> <p>+</p></div>
-
-    <div class="caja-beneficio">
-      <h3>SUMINISTRO DE ENERGÍA</h3>
-      <ul class="lista-beneficios">
-        <li>En <strong>LUNEXA</strong> unimos los beneficios del autoconsumo y el suministro de la red para <strong>aumentar tus ahorros.</strong></li>
-        <li><strong>Estabiliza el precio de tu energía</strong> a largo plazo. Una solución personalizada, flexible y adaptada tus las necesidades.</li>
-        <li>Todas tus necesidades de energía en <strong>una misma factura</strong>. Somos claros, sencillos y transparentes ¡así de fácil!
-
-
-</li>
-        
-      </ul>
-    </div>
-  </div>
-
-  <div class="texto-central-beneficio">
-  En LUNEXA unimos <strong>autoconsumo y suministro eléctrico,</strong> para que ahorres tanto día como de noche.
-</div>
-
-  <div class="boton-oferta">
-    <a href="#contacto">OFERTA PERSONALIZADA</a>
-  </div>
-</section>
-
-
-<section class="empresa-pasos">
-  <h2>¿CÓMO</span> AHORRAR EN ENERGÍA DESDE EL MINUTO 1?</span></h2>
-
-  <div class="pasos-con-linea">
-    <div class="linea-horiz"></div>
-
-    <div class="pasos-grid">
-      <div class="paso-box">
-        <div class="circulo"><span>1</span></div>
-        <h3>Hoy</h3>
-        <p><strong>Pídenos un presupuesto gratuito</strong><br>Estudiamos lo que tu tejado puede producir por ti, los ahorros que conseguirás y el precio de hacerlo realidad.</p>
-      </div>
-      <div class="paso-box">
-        <div class="circulo"><span>2</span></div>
-        <h3>En 72 horas</h3>
-        <p><strong>Recibes una propuesta personalizada</strong><br>Te presentamos un estudio de viabilidad con la implantación de los paneles solares en tu empresa, resolviendo todas tus dudas sobre trámites y subvenciones.</p>
-      </div>
-      <div class="paso-box">
-        <div class="circulo"><span>3</span></div>
-        <h3>En 1 semana</h3>
-        <p><strong>Visitamos tu empresa</strong><br>Un técnico verificará in situ el estudio de viabilidad y resolverá cualquier duda que tengas.</p>
-      </div>
-      <div class="paso-box">
-        <div class="circulo"><span>4</span></div>
-        <h3>En 3-4 semanas</h3>
-        <p><strong>Instalamos y empiezas a ahorrar</strong><br>Empieza a producir energía limpia y barata desde el minuto cero sin preocuparte de nada.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="comparativa-lunexa section">
-  <div class="contenedor-comparativa">
-    <!-- COLUMNA IZQUIERDA -->
-    <div class="columna-izquierda">
-   <h2 class="empresa-pasos-titulo">MÉTODO LUNEXA</h2>
-      <ul class="lista-comparativa">
-        <li><span>Desembolso inicial</span> <span class="no">No</span></li>
-        <li><span>Computa como deuda</span> <span class="no">No</span></li>
-        <li><span>Pago en función del consumo</span> <span class="si">Sí</span></li>
-        <li><span>Eres propietario de la instalación</span> <span class="si">Sí</span></li>
-        <li><span>Posibilidad de adquisición acelerada</span> <span class="si separado">Sí</span></li>
-        <li><span>Gestión y venta de excedentes</span> <span class="si">Sí</span></li>
-        <li><span>Mantenimiento incluido</span> <span class="si">Sí</span></li>
-      </ul>
-    </div>
-
-    <!-- COLUMNA DERECHA -->
-    <div class="columna-derecha">
-      <h2 class="empresa-pasos-titulo">¿POR QUÉ INSTALAR PLACAS SOLARES?</h2>
-      <div class="beneficio-item">
-        <img src="icono1.png" alt="Ahorro luz">
-        <p>Reduce tu factura de la luz al mínimo</p>
-      </div>
-      <div class="beneficio-item">
-        <img src="icono2.png" alt="Valor propiedad">
-        <p>Aumenta el valor de tu propiedad</p>
-      </div>
-      <div class="beneficio-item">
-        <img src="icono3.png" alt="Planeta sostenible">
-        <p>Cuida el único planeta que tenemos desde tu tejado</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="empresa-funcionamiento">
-  <div class="funcionamiento-contenido">
-
-   <div class="funcionamiento-texto">
-  <h2><strong>¿CÓMO FUNCIONAN</strong><span class="texto-fino"> LOS PANELES SOLARES EN TU EMPRESA?</span></h2>
-  <p>
-    En primer lugar, los paneles solares captan la energía del sol y la convierten en electricidad. A continuación, los inversores la transforman en electricidad apta para ser utilizada de forma segura y eficiente en tu empresa.
-  </p>
-  <p>
-    Esta energía se utiliza en tiempo real, cubriendo directamente tu demanda energética. Si instalas baterías, podrás almacenar el excedente y utilizarlo cuando lo necesites. También puedes verter la energía sobrante a la red, recibiendo una compensación económica. Otra opción es almacenarla en un monedero o batería virtual, donde podrás compensar consumos futuros sin límite de tiempo.
-  </p>
-</div>
-    
-    <div class="funcionamiento-imagen">
-      <img src="empresa1.png" alt="Funcionamiento de los paneles solares en la empresa">
-    </div>
-  </div>
+  <h3 class="frase-final-2">HACEMOS QUE EL SOL TRABAJE PARA TI</h3>
 </section>
 
 
@@ -381,44 +186,33 @@ Además, monitoreamos el sistema en tiempo real para asegurar su óptimo rendimi
       </form>
     </div>
   </section>
-  <!-- Footer -->
-  <footer>
+
+  <!-- FOOTER -->
+   <footer>
     <p>© 2025 LUNEXA · Energía Solar Inteligente</p>
   </footer>
 
-  <!-- Script para menú hamburguesa y submenu móvil -->
+  <!-- Script para el menú hamburguesa -->
   <script>
-    const toggleBtn = document.querySelector('.menu-toggle');
-    const navMenu = document.querySelector('.nav-principal ul');
-    const dropdown = document.querySelector('.dropdown');
-    const toggle = dropdown.querySelector('.dropdown-toggle');
-    const submenu = dropdown.querySelector('.submenu');
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggleBtn = document.querySelector('.menu-toggle');
+      const navList = document.querySelector('nav ul');
+      const navLinks = document.querySelectorAll('nav ul li a');
 
-    toggleBtn.addEventListener('click', () => {
-      navMenu.classList.toggle('show');
-    });
+      toggleBtn.addEventListener('click', function () {
+        navList.classList.toggle('show');
+      });
 
-    // Mostrar submenú y permitir redirección
-    toggle.addEventListener('click', (e) => {
-      submenu.classList.toggle('show-submenu');
-      // No evitamos el href → te redirige a index.html#servicios
-    });
-
-    // Cerrar menú al hacer clic en cualquier enlace
-    const navLinks = document.querySelectorAll('.nav-principal a');
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        if (window.innerWidth <= 768) {
-          navMenu.classList.remove('show');
-          document.querySelectorAll('.submenu').forEach(menu => {
-            menu.classList.remove('show-submenu');
-          });
-        }
+      navLinks.forEach(link => {
+        link.addEventListener('click', function () {
+          navList.classList.remove('show');
+        });
       });
     });
   </script>
 
 </body>
+
 <!-- MODO HAMBURGUESA -->
 <script>
   document.addEventListener('DOMContentLoaded', function () {
@@ -624,8 +418,4 @@ Además, monitoreamos el sistema en tiempo real para asegurar su óptimo rendimi
   });
 </script>
 
-
-
 </html>
-
-
