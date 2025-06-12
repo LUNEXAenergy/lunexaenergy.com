@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hogares | LUNEXA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<script>
+  // Selecciona todos los enlaces internos
+  const links = document.querySelectorAll('a[href]');
+  links.forEach(link => {
+    link.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+
+      // Solo aplica si el enlace va a otra página del mismo sitio (no _blank, ni tel/mailto)
+      if (!href.startsWith('http') && !href.startsWith('#') && !href.startsWith('mailto') && !href.startsWith('tel')) {
+        e.preventDefault(); // Evita navegación inmediata
+
+        // Agrega la clase fade-out al <body>
+        document.body.classList.add('fade-out');
+
+        // Espera a que termine la animación y luego navega
+        setTimeout(() => {
+          window.location.href = href;
+        }, 400); // mismo tiempo que en el CSS fadeOut
+      }
+    });
+  });
+</script>
+
+<body class="fade-in hogares-page no-index">
+  
+  <!-- Header con menú y hamburguesa -->
+  <header>
+  <div class="logo">
+  <a href="index.html">
+    <img src="logo.png" alt="Logo de LUNEXA" class="logo-png">
+  </a>
+</div>
+  <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+ <nav class="nav-principal">
+     
+      <ul class="menu-izquierda">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Autoconsumo</a>
+          <ul class="submenu">
+            <li><a href="empresa.html">Empresa</a></li>
+            <li><a href="hogares.html">Hogares</a></li>
+          </ul>
+        </li>
+       <!--<li><a href="luz.html">Luz</a></li>
+        </li>-->
+        <li><a href="independencia.html">Independencia Energética</a>
+        <li><a href="conocenos.html">Conócenos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+       <div class="cta-container">  
+        <a href="simulador.html" class="cta-ahorro">Calcula tu Ahorro</a>
+    </div>
+    </nav>
+</header>
+
+
+  <!-- Contenido específico de la página Hogares -->
+  <main class="empresa-hero">
+  <section class="empresa-intro">
+    <div class="texto">
+      <p class="categoria">PANELES PARA COMUNIDADES</p>
+      <h1><span class="negrita-sola">MINIMIZA LA FACTURA</span>  DE LA LUZ EN TU COMUNIDAD DE VECINOS</h1>
+      <p class="ahorro"><strong>Ahorra hasta un 70%</strong> en tu factura de la luz sin ninguna inversión inicial.</p>
+      <a href="simulador.html" class="btn btn-empresa">SOLICITAR PRESUPUESTO</a>
+    </div>
+    <div class="imagen">
+      <img src="hogares.jpg" alt="Instalación solar empresarial">
+    </div>
+  </section>
+
+  <section class="modalidades-comunidades">
+  <div class="contenedor-modalidades">
+    <div class="columna-titulo">
+      <h2>MODALIDADES DE AUTOCONSUMO PARA <br><span class="destacado-modalidad">COMUNIDADES DE VECINOS</span></h2>
+    </div>
+    <div class="columna-texto">
+      <p>
+        El <strong>65,7%</strong> de las personas en España viven en pisos que se organizan en comunidades de vecinos. Por lo tanto, si este es tu caso, estás en el lugar perfecto para dar el paso. Ya puedes empezar a disfrutar de las ventajas de la energía solar en tu comunidad, ya sea para uso privativo, comunitario o combinado. 
+        <strong>Una oportunidad real de ahorro</strong>, sostenibilidad y mejora para tu edificio… y para tu bolsillo.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="bloque-uso-comunitario">
+  <div class="uso-grid">
+    <div class="uso-columna izquierda">
+      <h3>USO COMUNITARIO</h3>
+      <p>
+        La energía generada se destina exclusivamente a las zonas comunes del edificio, como el ascensor, garajes, escaleras, rellanos, etc
+      </p>
+      <a href="simulador.html" class="btn btn-empresa btn-comunitario">Solicitar presupuesto</a>
+    </div>
+
+    <div class="uso-columna derecha">
+      <div class="bloque-info">
+        <h4>VENTAJAS</h4>
+        <ul>
+          <li>Reducción significativa en la factura de la luz comunitaria, es decir, un ahorro real, constante y garantizado mes a mes, sin sorpresas.</li>
+          <li>Mejora de la eficiencia energética del edificio.</li>
+          <li>Revalorización del inmueble.</li>
+        </ul>
+
+        <h4>ACUERDO NECESARIO</h4>
+        <p>
+          Para instalar placas solares en una comunidad de vecinos se requiere la aprobación en junta del 50% de los asistentes más uno, lo que se conoce como mayoría simple.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="bloque-uso-comunitario">
+  <div class="uso-grid">
+    <div class="uso-columna izquierda">
+      <h3>USO PRIVATIVO</h3>
+      <p>
+        Cada vecino usa la energía generada para su propia vivienda, es decir, se destina exclusivamente a zonas de uso privado. 
+      </p>
+      <a href="simulador.html" class="btn btn-empresa btn-comunitario">Solicitar presupuesto</a>
+    </div>
+
+    <div class="uso-columna derecha">
+      <div class="bloque-info">
+        <h4>VENTAJAS</h4>
+        <ul>
+          <li>Cada familia reduce su factura eléctrica, con la posibilidad de que otros vecinos se sumen en un futuro.</li>
+          <li>Revalorización del inmueble.</li>
+          <li>Fomento de la sostenibilidad individual.</li>
+        </ul>
+
+        <h4>ACUERDO NECESARIO</h4>
+        <p>
+          Para instalar placas solares en una comunidad de vecinos de uso privativo se requiere la aprobación de ⅓ de los propietarios de la comunidad. 
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="bloque-uso-comunitario-final">
+  <div class="uso-grid">
+    <div class="uso-columna izquierda">
+      <h3>USO COMBINADO</h3>
+      <p>
+        La energía generada se aprovecha tanto para las zonas comunes como para las privadas. Esto es, las viviendas de los vecinos que participen en la instalación, pudiendo otros vecinos unirse en un futuro. 
+      </p>
+      <a href="simulador.html" class="btn btn-empresa btn-comunitario">Solicitar presupuesto</a>
+    </div>
+
+    <div class="uso-columna derecha">
+      <div class="bloque-info">
+        <h4>VENTAJAS</h4>
+        <ul>
+          <li>Máximo aprovechamiento de la energía solar.  Se alcanza un mayor ahorro global para la comunidad y las familias que participan, reduciendo así tanto gastos compartidos como individuales. </li>
+          <li>Beneficios compartidos entre la comunidad y los vecinos. </li>
+          <li>Revalorización del inmueble.</li>
+        </ul>
+
+        <h4>ACUERDO NECESARIO</h4>
+        <p>
+          Para instalar placas solares en una comunidad de vecinos de uso privativo se requiere la aprobación de ⅓ de los propietarios de la comunidad. 
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <section class="modalidades-comunidades">
+  <div class="contenedor-modalidades">
+    <div class="columna-titulo">
+      <h2><br>¿CÓMO SE REPARTE LA ENERGÍA ENTRE LOS VECINOS? <br><span class="destacado-modalidad"></span></h2>
+    </div>
+     <div class="reparto-texto">
+      <p>
+        Es muy fácil, los vecinos que participan en la instalación pueden decidir cómo repartir la energía generada:
+      </p>
+      <ul>
+        <li><strong>Reparto fijo:</strong> cada vecino recibe un porcentaje fijo acordado entre todos (por ejemplo, un 20% cada uno)</li>
+        <li><strong>Reparto flexible:</strong> los vecinos acuerdan tramos horarios o criterios variables según el consumo o necesidades de cada uno.</li>
+      </ul>
+      <p>
+        Lo importante es que el reparto se adapta a lo que cada comunidad decida, y el ahorro comienza a notarse desde el primer día.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+  <section class="empresa-beneficios">
+    <h2>¿CÓMO FUNCIONA <span class="resaltado">EL AUTOCONSUMO DE LUNEXA SIN INVERSIÓN INICIAL</span> Y QUÉ <span class="resaltado">VENTAJAS TIENE?</span></h2>
+    <div class="beneficios-grid">
+      <div>
+        <h3>AUTOCONSUMO Y ENERGÍA DE LA RED</h3>
+        <p>En LUNEXA unimos autoconsumo y energía de la red para asegurar tu competitividad siempre y a largo plazo.</p>
+      </div>
+      <div>
+        <h3>FORMATO PERSONALIZADO</h3>
+        <p>Creamos instalaciones 100% personalizadas para tu empresa.</p>
+      </div>
+      <div>
+        <h3>SIN PREOCUPACIONES</h3>
+        <p>Paga solo por lo que consumes. Nosotros nos encargamos de todo: mantenimiento, suministro, seguimiento...</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<section class="beneficios-lunexa">
+  <h2 class="titulo-beneficios">TODOS LOS <span class="destacado">BENEFICIOS</span> DE LUNEXA...</h2>
+  <div class="contenedor-beneficios">
+    <div class="caja-beneficio">
+      <h3> ENERGÍA SOLAR DE AUTOCONSUMO</h3>
+     <ul class="lista-beneficios">
+        <li>Accede a autoconsumo sin inversión</li>
+        <li><strong>Ahorrará hasta un 70%</strong>, según tu tipología de consumo.</li>
+        <li>Monitorizamos la <strong>eficiencia de tu instalación</strong> a diario.</li>
+        <li><strong>Nos encargamos de todo.</strong> Sin papeleos ni preocupaciones.</li>
+        <li><strong>Invertimos en tu planta solar</strong>;tú decides la duración del contrato y al finalizar el contrato, pasará a ser tuya sin coste.</li>
+      </ul>
+    </div>
+
+    <div class="simbolo-central"> <p>+</p></div>
+
+    <div class="caja-beneficio">
+      <h3>SUMINISTRO DE ENERGÍA</h3>
+      <ul class="lista-beneficios">
+        <li>En <strong>LUNEXA</strong> unimos los beneficios del autoconsumo y el suministro de la red para <strong>aumentar tus ahorros.</strong></li>
+        <li><strong>Estabiliza el precio de tu energía</strong> a largo plazo. Una solución personalizada, flexible y adaptada tus las necesidades.</li>
+        <li>Todas tus necesidades de energía en <strong>una misma factura</strong>. Somos claros, sencillos y transparentes ¡así de fácil!
+
+
+</li>
+        
+      </ul>
+    </div>
+  </div>
+
+   <div class="texto-central-beneficio">
+  En LUNEXA unimos <strong>autoconsumo y suministro eléctrico,</strong> para que ahorres tanto día como de noche.
+</div>
+
+  <div class="boton-oferta">
+    <a href="#contacto">OFERTA PERSONALIZADA</a>
+  </div>
+</section>
+
+
+<section class="empresa-pasos">
+  <h2>¿CÓMO AHORRAR EN ENERGÍADESDE EL MINUTO 1?</h2>
+
+  <div class="pasos-con-linea">
+    <div class="linea-horiz"></div>
+
+    <div class="pasos-grid">
+      <div class="paso-box">
+        <div class="circulo"><span>1</span></div>
+        <h3>Hoy</h3>
+        <p><strong>Pídenos un presupuesto gratuito</strong><br>Estudiamos lo que tu tejado puede producir por ti, los ahorros que conseguirás y el precio de hacerlo realidad.</p>
+      </div>
+      <div class="paso-box">
+        <div class="circulo"><span>2</span></div>
+        <h3>En 72 horas</h3>
+        <p><strong>Recibes una propuesta personalizada</strong><br>Te presentamos un estudio de viabilidad con la implantación de los paneles solares en tu empresa, resolviendo todas tus dudas sobre trámites y subvenciones.</p>
+      </div>
+      <div class="paso-box">
+        <div class="circulo"><span>3</span></div>
+        <h3>En 1 semana</h3>
+        <p><strong>Visitamos tu empresa</strong><br>Un técnico verificará in situ el estudio de viabilidad y resolverá cualquier duda que tengas.</p>
+      </div>
+      <div class="paso-box">
+        <div class="circulo"><span>4</span></div>
+        <h3>En 3-4 semanas</h3>
+        <p><strong>Instalamos y empiezas a ahorrar</strong><br>Empieza a producir energía limpia y barata desde el minuto cero sin preocuparte de nada.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+   <section class="comparativa-lunexa section">
+  <div class="contenedor-comparativa">
+
+    <!-- VERSIÓN ORDENADOR -->
+    <div class="comparativa-ordenador">
+      <h2 class="empresa-pasos-titulo-2">¿EN QUÉ SE DIFERENCIA LUNEXA?</h2>
+      
+      <table class="tabla-comparativa">
+        <thead>
+          <tr>
+            <th></th>
+            <th>MÉTODO COTIDIANDO</th>
+            <th>MÉTODO <strong>LUNEXA</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Desembolso inicial</td><td class="si">Sí</td><td class="no">No</td></tr>
+          <tr><td>Computa como deuda/inversión</td><td class="si">Sí</td><td class="no">No</td></tr>
+          <tr><td>Pago en función del consumo</td><td class="no">No</td><td class="si">Sí</td></tr>
+          <tr><td>Eres propietario de la instalación</td><td class="si">Sí</td><td class="si">Sí</td></tr>
+          <tr><td>Posibilidad de adquisición acelerada</td><td class="no">No</td><td class="si">Sí</td></tr>
+          <tr><td>Gestión y venta de excedentes</td><td class="no">No</td><td class="si">Sí</td></tr>
+          <tr><td>Mantenimiento incluido</td><td class="no">No</td><td class="si">Sí</td></tr>
+        </tbody>
+      </table>
+    </div>
+    
+
+    <!-- VERSIÓN MOVIL -->
+    <div class="comparativa-movil">
+      <h2 class="empresa-pasos-titulo">MÉTODO LUNEXA</h2>
+      <ul class="lista-comparativa">
+        <li><span>Desembolso inicial</span> <span class="no">No</span></li>
+        <li><span>Computa como deuda</span> <span class="no">No</span></li>
+        <li><span>Pago en función del consumo</span> <span class="si">Sí</span></li>
+        <li><span>Eres propietario de la instalación</span> <span class="si">Sí</span></li>
+        <li><span>Posibilidad de adquisición acelerada</span> <span class="si">Sí</span></li>
+        <li><span>Gestión y venta de excedentes</span> <span class="si">Sí</span></li>
+        <li><span>Mantenimiento incluido</span> <span class="si">Sí</span></li>
+      </ul>
+    </div>
+
+    <!-- BLOQUE DE ICONOS -->
+    <div class="columna-derecha">
+      <h2 class="empresa-pasos-titulo">¿POR QUÉ INSTALAR PLACAS SOLARES?</h2>
+      <div class="beneficio-item">
+        <img src="icono1.png" alt="Ahorro luz">
+        <p>Reduce tu factura de la luz al mínimo</p>
+      </div>
+      <div class="beneficio-item">
+        <img src="icono2.png" alt="Valor propiedad">
+        <p>Aumenta el valor de tu propiedad</p>
+      </div>
+      <div class="beneficio-item">
+        <img src="icono3.png" alt="Planeta sostenible">
+        <p>Cuida el único planeta que tenemos desde tu tejado</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  
+
+<section class="empresa-funcionamiento">
+  <div class="funcionamiento-contenido">
+
+   <div class="funcionamiento-texto">
+  <h2><strong>¿CÓMO FUNCIONAN</strong><span class="texto-fino"> LOS PANELES SOLARES EN TU COMUNIDAD DE VECINOS?</span></h2>
+  <p>
+    En primer lugar, los paneles solares captan la energía del sol y la convierten en electricidad. A continuación, los inversores la transforman en electricidad apta para ser utilizada de forma segura y eficiente en tu empresa.
+  </p>
+  <p>
+    Esta energía se utiliza en tiempo real, cubriendo directamente tu demanda energética. Si instalas baterías, podrás almacenar el excedente y utilizarlo cuando lo necesites. También puedes verter la energía sobrante a la red, recibiendo una compensación económica. Otra opción es almacenarla en un monedero o batería virtual, donde podrás compensar consumos futuros sin límite de tiempo.
+  </p>
+</div>
+    
+    <div class="funcionamiento-imagen">
+     <img src="hogares1.png" alt="Funcionamiento de los paneles solares en la empresa" class="imagen-escalada">
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- LUZ -->
+  <section id="luz" class="section">
+    <h2>¿QUIERES AHORRAR EN TU FACTURA DE LA LUZ?</h2>
+    <p class="subtexto-luz">Ahorra hasta un <strong class="negrita-negra">70%</strong></p>
+    <div class="contenedor-luz-horizontal">
+      <img src="factura-icono.png" alt="Factura solar" class="imagen-luz-lateral">
+      <div class="card-luz-texto">
+        <a href="simulador.html" class="btn-icon-luz">CALCULA TU AHORRO</a>
+        <div style="height: 16px;"></div>
+        <p class="info-line"> Recibirás una respuesta en un plazo aproximado de 24 horas.</p>
+      </div>
+    </div>
+  </section>
+
+
+<!-- PREGUNTAS FREQUENTES -->
+<section id="descubre-mas" class="section">
+  <h2>DESCUBRE MÁS</h2>
+  <div id="bloquePreguntas" class="preguntas-grid">
+    <div class="pregunta-card">
+      <h4 class="pregunta-titulo">&#191;Cómo funciona el modelo sin inversión inicial?</h4>
+      <div class="respuesta">
+        <p>En Lunexa aplicamos un modelo PPA que te permite acceder a energía solar <strong>sin necesidad de realizar una inversión inicial</strong>. Nosotros nos encargamos de todo, diseñamos la instalación a medida, asumimos el coste y realizamos la instalación y gestionamos el mantenimiento y seguimiento continuo. 
+<br><br>Tú sólo pagas una <strong>cuota mensual acordada o en función del ahorro generado</strong> en tu factura eléctrica. De esta forma, <strong>empiezas a ahorrar desde el primer día</strong> y además, te beneficias de energía limpia, estable y más económica, mientras Lunexa asume toda la inversión y responsabilidad técnica.</p>
+      </div>
+    </div>
+
+    <div class="pregunta-card">
+      <h4 class="pregunta-titulo">&#191;Qué diferencia a Lunexa de otras empresas solares?</h4>
+      <div class="respuesta">
+        <p>En Lunexa, hacer el cambio a energía solar es totalmente gratis desde el primer día. No pedimos inversión inicial ni anticipos. Nos encargamos de todo: diseño, instalación, mantenimiento y monitoreo del sistema, sin que tengas que pagar nada por adelantado.
+<br><br>
+A diferencia de otras empresas, no te vendemos solo paneles: te damos una solución completa, sin riesgos, sin complicaciones y con ahorro garantizado desde el primer mes. Tú ahorras, nosotros nos encargamos del resto.
+</p>
+      </div>
+    </div>
+
+    <div class="pregunta-card">
+      <h4 class="pregunta-titulo">&#191;Cómo garantizáis la calidad y durabilidad de las instalaciones?
+      </h4>
+      <div class="respuesta">
+        <p>En Lunexa trabajamos solo con equipos de alta gama y tecnología certificada a nivel internacional. Nuestros paneles solares y componentes tienen garantías de hasta 25 años, y son instalados por profesionales certificados que siguen los más altos estándares de calidad.    
+<br><br>
+Además, monitoreamos el sistema en tiempo real para asegurar su óptimo rendimiento y ofrecemos mantenimiento incluido, para que tú no tengas que preocuparte por nada. Así garantizamos una instalación duradera, eficiente y sin sorpresas.
+</p>
+      </div>
+    </div>
+
+    <div class="pregunta-card">
+      <h4 class="pregunta-titulo">&#191;Cómo ahorrar en tu factura de la luz?</h4>
+      <div class="respuesta">
+        <p>En Lunexa no solo instalamos paneles solares: también somos comercializadora eléctrica. Esto nos permite ofrecerte una tarifa de luz personalizada, adaptada a tu consumo real y con precios más competitivos que las grandes eléctricas.
+<br><br>Al contratar la luz con Lunexa, te garantizamos: <strong>Ahorro directo</strong> en tu factura mensual,  <strong>transparencia total</strong>, sin costes ocultos ni letra pequeña y <strong>atención personalizada</strong>, sin intermediarios ni centralitas impersonales
+<br><br>Tengas o no una instalación solar, con Lunexa puedes empezar a ahorrar desde el primer mes simplemente cambiando tu suministro con nosotros. Ahorra, simplifica y apóyate en una empresa que sí se preocupa por ti.
+</p>
+      </div>
+    </div>
+
+    <div class="pregunta-card">
+      <h4 class="pregunta-titulo">&#191;Cuál es el impacto ambiental de elegir Lunexa?</h4>
+      <div class="respuesta">
+        <p>Elegir Lunexa significa reducir tu huella de carbono desde el primer día. Al generar energía solar en tu propia instalación, evitas emisiones de CO₂ y disminuyes el uso de fuentes contaminantes.Además, al consumir energía limpia y local, haces tu operación más eficiente y sostenible,<strong> sin coste inicial y sin riesgos.</strong> 
+<br><br><strong>Con Lunexa, ahorras mientras proteges el planeta</strong>.
+</p>
+      </div>
+    </div>
+
+    <div class="pregunta-card">
+      <h4 class="pregunta-titulo">&#191;Qué pasa si ya tengo placas en casa?</h4>
+      <div class="respuesta">
+        <p>En Lunexa también ofrecemos soluciones si ya cuentas con una instalación solar. <strong>Te compramos tus placas existentes</strong>, lo que te permite <strong>recuperar tu inversión y obtener liquidez inmediata</strong> sin renunciar a los beneficios de la energía solar. Nosotros nos encargamos del mantenimiento, la optimización y la gestión de la instalación. Tú solo pagas por la energía que consumes, con total tranquilidad.
+<br><br><strong>Convierte tus paneles en capital inmediato, y deja el resto en manos de Lunexa.</strong>
+</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+ 
+  <!-- CONTACTO -->
+  <section id="contacto" class="section">
+    <h2>CONTACTO</h2>
+    <p>¿Tienes dudas o te gustaría saber cómo podemos ayudarte a ahorrar con energía solar?</p>
+    <div class="contacto-wrapper">
+      <div class="mini-contacto">
+        <p><strong>📧</strong> dbermello@lunexaenergy.com</p>
+        <p><strong>📞</strong> 638 154 406</p>
+      </div>
+      <form id="contact-form" class="contact-form">
+        <input type="text" name="user_name" placeholder="Nombre" required>
+        <input type="text" name="user_lastname" placeholder="Apellidos" required>
+        <input type="email" name="user_email" placeholder="Email" required>
+        <input type="tel" name="user_phone" placeholder="Teléfono" required>
+        <textarea name="message" rows="4" placeholder="Tu mensaje" required></textarea>
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 LUNEXA · Energía Solar Inteligente</p>
+  </footer>
+
+  <!-- Script para menú hamburguesa y submenu móvil -->
+  <script>
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-principal ul');
+    const dropdown = document.querySelector('.dropdown');
+    const toggle = dropdown.querySelector('.dropdown-toggle');
+    const submenu = dropdown.querySelector('.submenu');
+
+    toggleBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+
+    // Mostrar submenú y permitir redirección
+    toggle.addEventListener('click', (e) => {
+      // Siempre mostrar submenú
+      submenu.classList.toggle('show-submenu');
+      // No evitar el comportamiento por defecto, así redirige a index.html#servicios
+    });
+
+    // Cerrar menú al hacer clic en cualquier enlace
+    const navLinks = document.querySelectorAll('.nav-principal a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          navMenu.classList.remove('show');
+          document.querySelectorAll('.submenu').forEach(menu => {
+            menu.classList.remove('show-submenu');
+          });
+        }
+      });
+    });
+  </script>
+
+</body>
+<!-- MODO HAMBURGUESA -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const navList = document.querySelector('nav ul');
+    const nav = document.querySelector('nav'); 
+    const navLinks = document.querySelectorAll('nav ul li a');
+    const submenu = document.querySelector('.submenu');
+
+    navList.classList.remove('show');
+
+    // Abrir/cerrar menú al hacer clic en el botón hamburguesa
+    toggleBtn.addEventListener('click', function (e) {
+        e.stopPropagation();  // Evita que se dispare el evento global al abrir
+        navList.classList.toggle('show');
+        nav.classList.toggle('active');
+
+        if (!navList.classList.contains('show')) {
+            submenu.classList.remove('show-submenu');
+        }
+
+        if (navList.classList.contains('show')) {
+            document.body.classList.add('menu-abierto');
+        } else {
+            document.body.classList.remove('menu-abierto');
+        }
+    });
+
+    // Gestionar clic en los enlaces del menú
+    navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            if (link.classList.contains('dropdown-toggle')) {
+                // Click en "Autoconsumo" → abre/cierra el submenu
+                e.preventDefault();
+                e.stopPropagation();
+
+                const parentDropdown = link.closest('.dropdown');
+                const submenu = parentDropdown.querySelector('.submenu');
+
+                submenu.classList.toggle('show-submenu');
+            } else if (link.closest('.submenu')) {
+                // Click en Empresa o Hogares: no hacemos nada especial (deja navegar)
+            } else {
+                // Click en otros enlaces: cierra todo
+                navList.classList.remove('show');
+                nav.classList.remove('active');
+
+                document.querySelectorAll('.submenu').forEach(sub => {
+                    sub.classList.remove('show-submenu');
+                });
+                document.body.classList.remove('menu-abierto');
+            }
+        });
+    });
+
+    // 💥 Cerrar el menú si haces clic fuera de él
+    document.addEventListener('click', function(event) {
+        const isClickInsideMenu = nav.contains(event.target);
+        const isClickOnToggle = toggleBtn.contains(event.target);
+
+        if (!isClickInsideMenu && !isClickOnToggle) {
+            if (nav.classList.contains('active')) {
+                navList.classList.remove('show');
+                nav.classList.remove('active');
+                submenu.classList.remove('show-submenu');
+                document.body.classList.remove('menu-abierto');
+            }
+        }
+    });
+
+    // 💥 Cerrar el menú si haces scroll
+    window.addEventListener('scroll', function() {
+        if (nav.classList.contains('active')) {
+            navList.classList.remove('show');
+            nav.classList.remove('active');
+            submenu.classList.remove('show-submenu');
+            document.body.classList.remove('menu-abierto');
+        }
+    });
+  });
+</script>
+
+
+<!-- DESCUBRE MÁS -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleBtn = document.getElementById("togglePreguntas");
+    const bloque = document.getElementById("bloquePreguntas");
+    const contenedor = document.getElementById("faq-container");
+
+    // Scroll con compensación
+    function scrollToWithOffset(element, offset = 10) {
+      const top = element.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({
+        top: top,
+        behavior: "smooth"
+      });
+    }
+
+    toggleBtn.addEventListener("click", () => {
+      const visible = !bloque.classList.contains("oculto");
+
+      if (visible) {
+        bloque.classList.add("oculto");
+      } else {
+        bloque.classList.remove("oculto");
+        setTimeout(() => {
+          scrollToWithOffset(contenedor, 70); // Este scroll deja el botón arriba
+        }, 100);
+      }
+    });
+
+    document.querySelectorAll("header a").forEach(link => {
+      link.addEventListener("click", () => {
+        bloque.classList.add("oculto");
+      });
+    });
+  });
+</script>
+
+
+<!-- DESCUBRE MÁS, TARJETAS ABRIENDOSE -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const tarjetas = document.querySelectorAll(".pregunta-card");
+
+    tarjetas.forEach(card => {
+      card.addEventListener("click", () => {
+        card.classList.toggle("activa");
+      });
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const elementos = document.querySelectorAll('.fade-in-on-scroll');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // activa solo una vez
+        }
+      });
+    }, { threshold: 0.3 });
+
+    elementos.forEach(el => observer.observe(el));
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const bloques = document.querySelectorAll(".animado");
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.3
+    });
+
+    bloques.forEach(b => observer.observe(b));
+  });
+</script>
+
+<!-- EmailJS SDK + Script funcional -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    emailjs.init('IsZob2GWypDxYHiUk'); // Tu Public Key válida
+
+    const form = document.getElementById('contact-form');
+    const submitBtn = form.querySelector('button');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      console.log('📨 Enviando formulario...');
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Enviando...';
+
+     emailjs.sendForm('service_e329u0t', 'template_q9rbpvt', form)
+        .then((response) => {
+          console.log('✅ Formulario enviado con éxito:', response);
+          alert('✅ ¡Mensaje enviado con éxito!');
+          form.reset();
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Enviar';
+        })
+        .catch((error) => {
+          console.error('❌ Error al enviar:', error);
+          alert('❌ Error al enviar. Ver consola para más detalles.');
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Enviar';
+        });
+    });
+  });
+</script>
+
+
+</html>
